@@ -6,119 +6,28 @@
 % OK to use and edit!
 
 \documentclass{cv_style_yui}
-\usepackage{enumitem}
-\usepackage{etaremune}
-\usepackage{amsmath}
-\usepackage[colorlinks = true, linkcolor = blue, urlcolor = blue, citecolor = blue, anchorcolor = blue]{hyperref}
-
-
-%-------------------------------------------------------------------------------
-%	PERSONAL INFORMATION
-%	Comment any of the lines below if they are not required
-%-------------------------------------------------------------------------------
-% Available options: circle|rectangle,edge/noedge,left/right
-% \photo[rectangle,edge,right]{./examples/profile}
-% \name{Yui}{Nishizawa}
-% \position{Software Developer}
-% \address{14-11-A102 Kasuga-cho, Ashiya, Hyogo, Japan 659-0021}
-
-%\mobile{(+81)90-9279-0119}
-%\email{yui.nishizawa@gmail.com}
-%%\dateofbirth{January 1st, 1970}
-%\homepage{ynishiza.github.io/githubpage/}
-%\github{ynishiza}
-%\linkedin{ynishiza}
-% \gitlab{gitlab-id}
-% \stackoverflow{SO-id}{SO-name}
-% \twitter{@twit}
-% \skype{skype-id}
-% \reddit{reddit-id}
-% \medium{madium-id}
-% \kaggle{kaggle-id}
-% \googlescholar{googlescholar-id}{name-to-display}
-%% \firstname and \lastname will be used
-% \googlescholar{googlescholar-id}{}
-% \extrainfo{PGP: 84FD 12EA 409F 72E0 BEA6 EB81 402F 3AD9 D851 C422}
-
-
-% \newcommand{\rf}{\href{https://nodejs.org/}{}}
-% CLI
-\newcommand{\rfneovim}{\href{https://neovim.io/}{neovim}}
-\newcommand{\rfvim}{\href{https://www.vim.org/}{vim}}
-\newcommand{\rfgit}{\href{https://git-scm.com/}{git}}
-\newcommand{\rftmux}{\href{https://github.com/tmux/tmux}{tmux}}
-\newcommand{\rfbash}{\href{https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html}{bash}}
-\newcommand{\rfgpg}{\href{https://nodejs.org/}{gpg}}
-\newcommand{\rflatex}{\href{https://www.latex-project.org/}{LaTeX}}
-% Programming
-\newcommand{\rftypescript}{\href{https://www.typescriptlang.org/}{TypeScript}}
-\newcommand{\rfjavascript}{\href{https://developer.mozilla.org/en-US/docs/Web/JavaScript}{JavaScript}}
-\newcommand{\rfreact}{\href{https://reactjs.org/}{React}}
-\newcommand{\rfphp}{\href{https://www.php.net/manual/en/index.php}{PHP}}
-\newcommand{\rfpython}{\href{https://www.python.org/}{Python}}
-\newcommand{\rfrlang}{\href{https://www.r-project.org/}{R}}
-\newcommand{\rfcsharp}{\href{https://docs.microsoft.com/en-us/dotnet/csharp/}{C\#}}
-\newcommand{\rfcpp}{\href{https://isocpp.org/}{C/C++}}
-\newcommand{\rfclang}{\href{https://en.wikipedia.org/wiki/C_(programming_language)}{C}}
-\newcommand{\rfhaskell}{\href{https://www.haskell.org/}{Haskell}}
-\newcommand{\rffortran}{\href{https://en.wikipedia.org/wiki/Fortran}{Fortran 95}}
-\newcommand{\rfcypress}{\href{https://www.cypress.io/}{Cypress}}
-\newcommand{\rfnodejs}{\href{https://nodejs.org/}{Node.js}}
-\newcommand{\rfhtml}{\href{https://developer.mozilla.org/en-US/docs/Web/HTML}{HTML}}
-\newcommand{\rfcss}{\href{https://developer.mozilla.org/en-US/docs/Web/CSS}{CSS}}
-% DB
-\newcommand{\rfredis}{\href{https://neo4j.com/}{Redis}}
-\newcommand{\rfneofj}{\href{https://neo4j.com/}{Neo4j}}
-\newcommand{\rfmongodb}{\href{https://www.mongodb.com/}{MongoDB}}
-\newcommand{\rfmysql}{\href{https://www.mysql.com/}{MySQL}}
-\newcommand{\rfelastic}{\href{https://www.elastic.co/}{Elasticsearch}}
-% Tools
-\newcommand{\rfansible}{\href{https://www.ansible.com/}{Ansible}}
-\newcommand{\rfterraform}{\href{https://www.terraform.io/}{Terraform}}
-\newcommand{\rfdocker}{\href{https://www.docker.com/}{Docker}}
-\newcommand{\rfnginx}{\href{https://www.nginx.com/}{NGINX}}
-% Services
-\newcommand{\rfaws}{\href{https://aws.amazon.com/}{AWS}}
-\newcommand{\rfnewrelic}{\href{https://newrelic.com}{New Relic}}
-\newcommand{\rfsumologic}{\href{https://www.sumologic.com/}{Sumo Logic}}
-\newcommand{\rfjenkins}{\href{https://www.jenkins.io/}{Jenkins}}
-
-\newcommand{\tgproject}[1]{[Project]{#1}:}
-\newcommand{\tgsubitem}{\\- }
-\newcommand{\tgsubitemlabel}[1]{\\- {#1}:}
-\newcommand{\tgskills}{\tgsubitemlabel{{\bf skills}}}
-
-\newcommand{\keyword}[1]{{\bf #1}}
-
 
 \begin{document}
-
 \footnotetext[1]{Updated \today}
 \pagenumbering{gobble}
 
+% Profile
 \begin{center} 
-  \name{Yui Nishizawa}
-% \position{Software Developer}
-% \address{14-11-A102 Kasuga-cho, Ashiya, Hyogo, Japan 659-0021}
-
-  % \contact
-  %   {Software Developer}
-  %   {Department}
-  %   {Office}
-    % {\href{mailto:your.email@institution.edu}{your.email@institution.edu}}
-    % {\href{http://www.institution.edu/your_website/}{your website}}
-    % {ynishiza}
+  \name{Yui Nishizawa} \\
   Software Developer \\
-  14-11-A102 Kasuga-cho, Ashiya, Japan 659-0021 \\
+  14\-11\-A102 Kasuga-cho, Ashiya, Japan 659-0021 \\
   \mobile{(+81)-90-9279-0119} \\
   \email{yui.nishizawa@gmail.com} \\
   \homepage{https://ynishiza.github.io/githubpage/} 
   \github{ynishiza}
-  \linkedin{ynishiza}
+  \linkedin{ynishiza} \\
+  PGP: 84FD 12EA 409F 72E0 BEA6 EB81 402F 3AD9 D851 C422  
 \end{center}
 
 \input{./summary.tex}
+\vphantom{A}
 \input{./experience.tex}
-	
-
+\vphantom{A}
+\input{./education.tex}
+\vphantom{A}
 \end{document}
