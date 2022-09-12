@@ -94,7 +94,7 @@
 % Personal info
 \newcommand{\mobile}[1]{\href{tel:#1}{\faMobile \ #1}}
 \newcommand{\email}[1]{\href{mailto:#1}{\faEnvelope\ #1}} 
-\newcommand{\homepage}[1]{\href{#1}{\faHome\ #1}}
+\newcommand{\homepage}[1]{\href{#1}{homepage:\ #1}}
 \newcommand{\github}[1]{\href{https://github.com/#1}{\faGithubSquare\ #1}}
 \newcommand{\linkedin}[1]{\href{https://www.linkedin.com/in/#1}{\faLinkedin\ #1}}
 \newcommand{\liststyle}{\setlength\itemsep{-0.2em}}

@@ -1,4 +1,5 @@
 \section{Work Experience}
+- Deployed Radmind, an open source file management software for synchronizing managed files across all school lab computers.
 \cventry
   {Software Developer} % Job title
   {Exaptive Inc.} % Organization
@@ -10,16 +11,15 @@
       \item {\tgproject{Cognitive city} a general knowledge base
         % - skills: \rfnodejs, distributed systems, \rfmongodb, \rfneofj, \rfredis, \rfreact, \rfaws, \rfterraform, \rfansible, \rfjenkins, \rfnewrelic, Elasticsearch \\
         \tgsubitemlabel{Primary designer and developer of the application backend} 
-          the core of the backend was a {\it multi-model database} (\rfmongodb, \rfneofj, \rfelastic) and a {\it REST API}, implemented with a {\it distributed architecture} written in \rfnodejs. 
-          Designed and implemented the main system architecture, data structures, and APIs. 
-          Implemented various features to scale the system in correspondence with usage. 
+          the core of the backend was a {\it multi-model database} (\rfmongodb, \rfneofj, \rfelastic) and a {\it REST API}, implemented as a {\it distributed architecture} written in \rfnodejs. 
+          Designed and implemented the main system architecture, data structures, and interfaces. 
+          Most of my day to day work consisted of fine-tuning and scaling the system to keep up with the usage.
           Some topics addressed were:
-          data consistency and synchronization,
-          data migration,
-          parallelization,
+          process parallelization and coordination,
+          data synchronization and consistency,
           crash recovery,
           error handling and error code schemes,
-          access control system (RBAC, ABAC).
+          access control (RBAC, ABAC).
           Also managed {\it site reliability} features, such as structured logging and logging practices, and setting up events, monitors and alerts in \rfnewrelic (initially also \rfsumologic).
         \tgsubitemlabel{Testing} introduced rigorous testing practices to ensure that every feature and changes are tested thoroughly, including security tests. 
         Implemented custom testing tools and frameworks to facilitate and thereby encourage testing.
@@ -35,24 +35,62 @@ Project: Cognitive City
 Description: 
 
 Primary designer and developer of application backend.
-Backend: a {\it multi-model database} (\rfmongodb, \rfneofj, \rfelastic) with a {\it REST API}
-Implementation: a {\it distributed architecture} in \rfnodejs. 
+Backend: 
+- a graph database with a multi-model backing:  \rfmongodb as core database, \rfneofj for graph queries, \rfelastic for text search
+- interface: {\it REST API}
+- Implementation: \rfnodejs 
+- architecture: distributed
 
-Designed and implemented the main system architecture, data structures, and APIs. 
 
 Features:
-- safe data migration: a migration system consisting of a migration history 
-- data consistency: with write lock
-  concepts: message queue
-- system architecture: separation of REST API layer from the main application process layer
+- safe data migration: 
+A migration system with a migration history 
+Advantage: 
+  * retain record of migrations
+  * can replay migration on any database
+Disadvantage:
+  * difficult to see the whole schema at any given moment, as changes are dispersed throughout the migration.
+    Can workaround to some extent with schema validation.
+
+- application architecture: 
+Layers
+* application interface layer: mainly handling HTTP requests
+* application process layer: handling heavier processes
+  e.g. writing data
+  e.g. expensive reads, such as graph queries
+* background layer: various background processes
+  e.g. syncing multi-model database
+  Separation of REST API layer from the main application process layer
+concepts: message queue, worker processes
+
+
+- parallelization and coordination: 
+  Parallelized work for performance where possible 
+  Write lock for data write coordination. Since REST API was separated and cloned, need write lock to safely coordinate writes. 
+  tools: message queue
+
+
+- data synchronization and consistency: 
+  Data was synchronization of across the multi database models
+  Synchronization was eventually consistent (weak consistency) i.e. Neo4j and Elasticsearch were eventually consistent.
+  Monotonic aka order-preserving i.e. synchronization was performed in the order of writes
   concepts: message queue, worker processes
-- synchronization: consistent (i.e. order respecting) synchronization of data across the multi database models
-  concepts: message queue, worker processes
-- error handling: error handling and error code scheme
-- fault tolerance: crash recovery
-- security: access control
-  role based access control (RBAC) as basis
-  attribute based access control (ABAC) for fine-grained control e.g. limit control by element owner
+
+
+- error handling and error codes:
+
+  
+- fault tolerance: 
+  Crash recovery 
+  * safely restart process on crash
+  * 
+
+- access control
+  Role based access control (RBAC) as basis
+  Attribute based access control (ABAC) for fine-grained control 
+   e.g. only element owner can read private element 
+   e.g. only user with a given email domain (e.g. gmail.com) can read element
+
 
 Testing:
 Introduced rigorous testing practices to ensure that every feature and changes are tested thoroughly, including security tests (e.g. access control). 
@@ -107,20 +145,45 @@ access control system (RBAC, ABAC).
   {2010-2011} % Date(s)
   {
     \begin{itemize} % Description(s) of tasks/responsibilities
+      \liststyle
       \item {skills: \rfcsharp, \rftypescript, \rfhtml/\rfcss \rfbash \ scripting, \rfaws}
       \item{\tgproject{Glide, a WYSIWYG webpage editor}
       \tgskills \rfcsharp, \rftypescript, \rfhtml/\rfcss, \rfbash, \rfaws
       }
-      \item{\tgproject{Selective API, a reactive programming data structure with a LINQ interface}
-      this was before reactive programming started becoming popular, such as \rfreact.
-      \tgsubitem designed and implemented a complete set of automated tests for the data structure, 
-      and fixed any issues found in the process, including bugs and performance issues. 
-      Also performed additional performance analysis and optimizations.
-      \tgsubitem documented the specifications of the data structure by establishing precise definitions and rigorously ensuring correctness of its functions.
-      \tgskills \rfcsharp, \rflatex
+
+      \item{\tgproject{Selective API, a reactive programming data structure with LINQ interface}
+      this was before reactive programming, such as \rfreact, started becoming popular. 
+      My main task was designing and implementing a complete set of automated tests for the implementing structure, and fixing any issues found in the process, including performance issues. 
+      Also documented full specifications of the data structure by establishing logically precise definitions.
+      \tgskills Visual Studio, \rfcsharp, \rflatex
       }
     \end{itemize}
+\mynotes{
+A modern WYSIWYG webpage editor
+- Initially implemented in C#, later ported to TypeScript
+- redesigned and implemented the HTML layout engine
+i.e. a layout engine for converting the user design into corresponding layout in HTML/CSS
+- assisted frontend tasks, such as implementing animations
+- DevOps: bash scripts to deploy application server to AWS
+
+Skills: C#, TypeScript, HTML/CSS, bash, AWS
+Tools: Visual Studio, AWS
+
+Selective API (C#): a reactive programming data structure with LINQ interface
+- a reactive data structure (i.e. a chainable data structure that updates each layer when the value of the base changes) before reactive programming became popular
+- used for programming the UI e.g. update UI when underlying data changes
+- main task: designed and implemented a complete set of unit tests for thoroughly testing the data structure
+  Fixed issues found in the process, including performance issues
+  Utilized performance analysis tools 
+- main task: document full specifications of the Selective API 
+  Establish logically precise specification for each feature
+  Rigorously ensure correctness of behavior
+
+Skills: C#, LaTeX
+Tools: Visual Studio, AWS
+}
   }
+
 
 \cventry
   {Computational Research Assistant (Internship)} % Job title
@@ -129,20 +192,47 @@ access control system (RBAC, ABAC).
   {2008 - 2009} % Date(s)
   {
     \begin{itemize} % Description(s) of tasks/responsibilities
+      \liststyle
       \item {a}
     \end{itemize}
   }
+\mynotes{
+}
+
+
 
 \cventry
   {Research Assistant (Internship)} % Job title
   {Center of Atmospheric Sciences (University of Waterloo)} % Organization
+  {Waterloo, ON, Canada} % Date(s)
   {Jan 2008 - Apr 2008} % Location
-  {} % Date(s)
   {
     \begin{itemize} % Description(s) of tasks/responsibilities
-      \item {a}
+      \liststyle
+      \item {helped reproduce snowflake-like ice particles with clear crystalline shapes for the first time in the lab's flowtube. The key was adding more moisture.}
+      \item {\tgproject{3D shape identification} designed and implemented a program to identify the 3D shape of ice particles from images taken in the flowtube. 
+      The program applied the theory of discrete Fourier shape descriptors. 
+      I reduced a core integral equation used at the lab into a simpler form.
+      \tgskills: \rfcpp, \rfmysql}
     \end{itemize}
   }
+\mynotes{
+- helped reproduce snowflake-like ice particles with clear crystalline shapes for the first time in the lab's flowtube.
+The key was adding more moisture.
+
+- 3D shape identification of ice particles:
+Ice particle 3D shape identification program
+Method: Fourier shape descriptor 
+i.e. a set of numbers associated with a given set of coordinates. 
+Represents shape since it has the same invariants as a shape i.e. invariant under rotation, scaling
+
+Implementation: C/C++
+
+Successfully improved accuracy of ice particle shape identification using this program
+Program scans hundreds of images taken in the lab efficiently and categorized each.
+
+Skills: C/C++, MySQL
+}
 
 \cventry
   {Quality Analyst (Internship)} % Job title
@@ -151,9 +241,14 @@ access control system (RBAC, ABAC).
   {May 2007 - Aug 2007} % Date(s)
   {
     \begin{itemize} % Description(s) of tasks/responsibilities
-      \item {a}
+      \liststyle
+      \item {Tested Foglight, a performance monitoring software, on various systems including openSUSE, Red Hat Linux, Solaris, and HP-UX.}
     \end{itemize}
   }
+\mynotes{
+Automated setups and tests using shell scripts.
+}
+
 \cventry
   {IT Assistant (Internship)} % Job title
   {Canadian Academy} % Organization
@@ -161,6 +256,13 @@ access control system (RBAC, ABAC).
   {Sep 2006 - Dec 2006} % Location
   {
     \begin{itemize} % Description(s) of tasks/responsibilities
-      \item {a}
+      \liststyle
+      \item {Provided technical assistance to school staff.}
+      \item {\tgproject{file administration} deployed \href{http://www.radmind.org/}{Radmind}, an open source remote file system administration software for synchronizing managed files across all school lab computers.}
     \end{itemize}
   }
+\mynotes{
+- Provided technical assistance to school staff
+- Deployed Radmind, an open source file administration software for synchronizing managed files across all school lab computers.
+Conducted workshop to school tech team on usage
+}
