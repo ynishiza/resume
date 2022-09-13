@@ -16,7 +16,7 @@
 \RequirePackage{fontawesome5}
 % colors
 %  xcolor: https://ftp.yz.yamagata-u.ac.jp/pub/CTAN/macros/latex/contrib/xcolor/xcolor.pdf
-\usepackage[colorlinks = true, linkcolor = darkgray, urlcolor = darkgray, citecolor = darkgray, anchorcolor = darkgray]{hyperref}
+\usepackage[colorlinks = true, linkcolor = gray, urlcolor = gray, citecolor = gray, anchorcolor = gray]{hyperref}
 
 \usepackage{enumitem}
 \usepackage{etaremune}
@@ -134,7 +134,7 @@
 \newcommand{\rfhtml}{\href{https://developer.mozilla.org/en-US/docs/Web/HTML}{HTML}}
 \newcommand{\rfcss}{\href{https://developer.mozilla.org/en-US/docs/Web/CSS}{CSS}}
 % DB
-\newcommand{\rfredis}{\href{https://neo4j.com/}{Redis}}
+\newcommand{\rfredis}{\href{https://redis.io/}{Redis}}
 \newcommand{\rfneofj}{\href{https://neo4j.com/}{Neo4j}}
 \newcommand{\rfmongodb}{\href{https://www.mongodb.com/}{MongoDB}}
 \newcommand{\rfmysql}{\href{https://www.mysql.com/}{MySQL}}
@@ -154,9 +154,9 @@
 % Other
 %
 % tg=tag
-\newcommand{\tgproject}[1]{[Project]{#1}:}
-\newcommand{\tgsubitem}{\\- }
-\newcommand{\tgsubitemlabel}[1]{\\- {#1}:}
+\newcommand{\tgproject}[1]{[Project]{ #1}:}
+\newcommand{\tgsubitem}{\\}
+\newcommand{\tgsubitemlabel}[1]{\\- { #1}:}
 \newcommand{\tgskills}{\tgsubitemlabel{{\bf skills}}}
 \newcommand{\keyword}[1]{{\it #1}}
 \newcommand{\mynotes}[1]{\iffalse #1 \fi}

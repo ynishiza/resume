@@ -9,23 +9,6 @@
     \begin{itemize} % Description(s) of tasks/responsibilities
       \liststyle
       \item {\tgproject{Cognitive city} a general knowledge base
-        % - skills: \rfnodejs, distributed systems, \rfmongodb, \rfneofj, \rfredis, \rfreact, \rfaws, \rfterraform, \rfansible, \rfjenkins, \rfnewrelic, Elasticsearch \\
-        \tgsubitemlabel{Primary designer and developer of the application backend} 
-          the core of the backend was a {\it multi-model database} (\rfmongodb, \rfneofj, \rfelastic) and a {\it REST API}, implemented as a {\it distributed architecture} written in \rfnodejs. 
-          Designed and implemented the main system architecture, data structures, and interfaces. 
-          Most of my day to day work consisted of fine-tuning and scaling the system to keep up with the usage.
-          Some topics addressed were:
-          process parallelization and coordination,
-          data synchronization and consistency,
-          crash recovery,
-          error handling and error code schemes,
-          access control (RBAC, ABAC).
-          Also managed {\it site reliability} features, such as structured logging and logging practices, and setting up events, monitors and alerts in \rfnewrelic (initially also \rfsumologic).
-        \tgsubitemlabel{Testing} introduced rigorous testing practices to ensure that every feature and changes are tested thoroughly, including security tests. 
-        Implemented custom testing tools and frameworks to facilitate and thereby encourage testing.
-        1800 tests at time of leaving. 
-        Also helped redesign a testing framework in \rfcypress for the frontend team where testing was not as effective.  
-        \tgsubitemlabel{Other} assisted in frontend development and DevOps as necessary. 
         \tgskills (Backend) \rfnodejs, \rfmongodb, \rfneofj, \rfredis,  \rfbash, \rfdocker, 
         (DevOps) \rfaws, \rfterraform, \rfansible, \rfjenkins, \rfnewrelic, \rfsumologic,
         (Frontend) \rfreact, \rfcypress
@@ -147,57 +130,34 @@ access control system (RBAC, ABAC).
     \begin{itemize} % Description(s) of tasks/responsibilities
       \liststyle
       \item {skills: \rfcsharp, \rftypescript, \rfhtml/\rfcss \rfbash \ scripting, \rfaws}
-      \item{\tgproject{Glide, a WYSIWYG webpage editor}
-      \tgskills \rfcsharp, \rftypescript, \rfhtml/\rfcss, \rfbash, \rfaws
+      \item{\tgproject{a WYSIWYG webpage editor} initially in \rfcsharp, then redesigned and reimplemented in \rftypescript. 
+      \\My main contribution was redesigning and implementing a more efficient layout engine, which converts the user design into corresponding \rfhtml/\rfcss.
+      \\Also assisted with frontend and DevOps as needed, such as writing \rfbash scripts to deploy updates to \rfaws.
+      \tgskills VMWare, Visual Studio, \rfcsharp, \rftypescript, \rfhtml/\rfcss, \rfbash, \rfaws
       }
 
       \item{\tgproject{Selective API, a reactive programming data structure with LINQ interface}
-      this was before reactive programming, such as \rfreact, started becoming popular. 
-      My main task was designing and implementing a complete set of automated tests for the implementing structure, and fixing any issues found in the process, including performance issues. 
-      Also documented full specifications of the data structure by establishing logically precise definitions.
-      \tgskills Visual Studio, \rfcsharp, \rflatex
+      this was before reactive programming became main stream, such as with \rfreact.
+      \\My main task was designing and implementing a complete set of automated tests for the implementing structure, and fixing any issues found in the process, including performance issues. 
+      \\Also documented full specifications of the data structure, establishing logically precise definitions and verifying functional correctness.
+      \tgskills VMWare, Visual Studio, \rfcsharp, \rflatex
+
       }
     \end{itemize}
-\mynotes{
-A modern WYSIWYG webpage editor
-- Initially implemented in C#, later ported to TypeScript
-- redesigned and implemented the HTML layout engine
-i.e. a layout engine for converting the user design into corresponding layout in HTML/CSS
-- assisted frontend tasks, such as implementing animations
-- DevOps: bash scripts to deploy application server to AWS
-
-Skills: C#, TypeScript, HTML/CSS, bash, AWS
-Tools: Visual Studio, AWS
-
-Selective API (C#): a reactive programming data structure with LINQ interface
-- a reactive data structure (i.e. a chainable data structure that updates each layer when the value of the base changes) before reactive programming became popular
-- used for programming the UI e.g. update UI when underlying data changes
-- main task: designed and implemented a complete set of unit tests for thoroughly testing the data structure
-  Fixed issues found in the process, including performance issues
-  Utilized performance analysis tools 
-- main task: document full specifications of the Selective API 
-  Establish logically precise specification for each feature
-  Rigorously ensure correctness of behavior
-
-Skills: C#, LaTeX
-Tools: Visual Studio, AWS
-}
   }
-
 
 \cventry
   {Computational Research Assistant (Internship)} % Job title
   {CANMET Materials Technology Laboratory (NRCan)} % Organization
   {Ottawa, ON, Canada} % Location
-  {2008 - 2009} % Date(s)
+  {2008 - 2009} % chktex 8
   {
     \begin{itemize} % Description(s) of tasks/responsibilities
       \liststyle
-      \item {a}
+      \item {LAAMPS}
+      \item {One of my accomplishments was devising a way to dynamically select a key threshold as in place of the traditional manual approach, by applying statistical tools. }
     \end{itemize}
   }
-\mynotes{
-}
 
 
 
@@ -211,28 +171,11 @@ Tools: Visual Studio, AWS
       \liststyle
       \item {helped reproduce snowflake-like ice particles with clear crystalline shapes for the first time in the lab's flowtube. The key was adding more moisture.}
       \item {\tgproject{3D shape identification} designed and implemented a program to identify the 3D shape of ice particles from images taken in the flowtube. 
-      The program applied the theory of discrete Fourier shape descriptors. 
+      The program applied the theory of discrete Fourier shape descriptors. \\
       I reduced a core integral equation used at the lab into a simpler form.
       \tgskills: \rfcpp, \rfmysql}
     \end{itemize}
   }
-\mynotes{
-- helped reproduce snowflake-like ice particles with clear crystalline shapes for the first time in the lab's flowtube.
-The key was adding more moisture.
-
-- 3D shape identification of ice particles:
-Ice particle 3D shape identification program
-Method: Fourier shape descriptor 
-i.e. a set of numbers associated with a given set of coordinates. 
-Represents shape since it has the same invariants as a shape i.e. invariant under rotation, scaling
-
-Implementation: C/C++
-
-Successfully improved accuracy of ice particle shape identification using this program
-Program scans hundreds of images taken in the lab efficiently and categorized each.
-
-Skills: C/C++, MySQL
-}
 
 \cventry
   {Quality Analyst (Internship)} % Job title
@@ -258,11 +201,6 @@ Automated setups and tests using shell scripts.
     \begin{itemize} % Description(s) of tasks/responsibilities
       \liststyle
       \item {Provided technical assistance to school staff.}
-      \item {\tgproject{file administration} deployed \href{http://www.radmind.org/}{Radmind}, an open source remote file system administration software for synchronizing managed files across all school lab computers.}
+      \item {\tgproject{file administration} deployed \href{http://www.radmind.org/}{Radmind}, an open source remote Unix file system administration software for synchronizing managed files across all school lab computers.}
     \end{itemize}
   }
-\mynotes{
-- Provided technical assistance to school staff
-- Deployed Radmind, an open source file administration software for synchronizing managed files across all school lab computers.
-Conducted workshop to school tech team on usage
-}

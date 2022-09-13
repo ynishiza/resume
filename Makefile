@@ -2,7 +2,7 @@ SHELL=/bin/bash
 # TEX=pdflatex
 TEX=xelatex
 
-PDF=main.pdf
+PDF=resume.pdf
 SOURCE=$(wildcard *.tex)
 
 default: help
