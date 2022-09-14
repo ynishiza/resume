@@ -1,122 +1,44 @@
 \section{Work Experience}
-- Deployed Radmind, an open source file management software for synchronizing managed files across all school lab computers.
+
 \cventry
   {Software Developer} % Job title
   {Exaptive Inc.} % Organization
-  {Kobe, Hyogo, Japan} % Location
+  {Vancouver, ON, Canada + Kobe, Hyogo, Japan} % Location
   {June 2014 - August 2022} % Date(s)
   {
     \begin{itemize} % Description(s) of tasks/responsibilities
       \liststyle
-      \item {\tgproject{Cognitive city} a general knowledge base
-        \tgskills (Backend) \rfnodejs, \rfmongodb, \rfneofj, \rfredis,  \rfbash, \rfdocker, 
-        (DevOps) \rfaws, \rfterraform, \rfansible, \rfjenkins, \rfnewrelic, \rfsumologic,
+      \item {\tgproject{Cognitive city (2019-2022)} a generic graph-model knowledge base, advertised as a "social network of ideas".
+        I was the principal designer and developer for the application backend.
+        Aside from the core knowledge base, the backend included various other services, 
+        such as user management and login, API key, app customization, and analysis tools.
+        The backend was a distributed system written in \rfnodejs, through which I learned various principals such as 
+        authentication+authorization, 
+        data consistency, 
+        process parallelization+coordination, 
+        fault tolerance, 
+        access control, 
+        process logging and site reliability, 
+        etc.
+        \tgsubitem test suite: introduced rigorous test writing practice, thoroughly testing every change and feature, including security. 
+        Over 1800 tests at time of leaving.
+        It was robust enough that we can constantly refactor and refine the code with ease. 
+        \tgsubitem assisted with frontend and DevOps as necessary. 
+        Designed and implemented test framework for the fronted team in \rfcypress.
+        \tgskills (Backend) \rfnodejs, \rfmongodb, \rfneofj, \rfredis, \rfelastic, \rfbash, \rfdocker, 
+        (DevOps) \rfaws, \rfansible, \rfterraform, \rfjenkins, \rfnewrelic, \rfsumologic,
         (Frontend) \rfreact, \rfcypress
       }
-      \mynotes{
-Project: Cognitive City
-Description: 
 
-Primary designer and developer of application backend.
-Backend: 
-- a graph database with a multi-model backing:  \rfmongodb as core database, \rfneofj for graph queries, \rfelastic for text search
-- interface: {\it REST API}
-- Implementation: \rfnodejs 
-- architecture: distributed
-
-
-Features:
-- safe data migration: 
-A migration system with a migration history 
-Advantage: 
-  * retain record of migrations
-  * can replay migration on any database
-Disadvantage:
-  * difficult to see the whole schema at any given moment, as changes are dispersed throughout the migration.
-    Can workaround to some extent with schema validation.
-
-- application architecture: 
-Layers
-* application interface layer: mainly handling HTTP requests
-* application process layer: handling heavier processes
-  e.g. writing data
-  e.g. expensive reads, such as graph queries
-* background layer: various background processes
-  e.g. syncing multi-model database
-  Separation of REST API layer from the main application process layer
-concepts: message queue, worker processes
-
-
-- parallelization and coordination: 
-  Parallelized work for performance where possible 
-  Write lock for data write coordination. Since REST API was separated and cloned, need write lock to safely coordinate writes. 
-  tools: message queue
-
-
-- data synchronization and consistency: 
-  Data was synchronization of across the multi database models
-  Synchronization was eventually consistent (weak consistency) i.e. Neo4j and Elasticsearch were eventually consistent.
-  Monotonic aka order-preserving i.e. synchronization was performed in the order of writes
-  concepts: message queue, worker processes
-
-
-- error handling and error codes:
-
-  
-- fault tolerance: 
-  Crash recovery 
-  * safely restart process on crash
-  * 
-
-- access control
-  Role based access control (RBAC) as basis
-  Attribute based access control (ABAC) for fine-grained control 
-   e.g. only element owner can read private element 
-   e.g. only user with a given email domain (e.g. gmail.com) can read element
-
-
-Testing:
-Introduced rigorous testing practices to ensure that every feature and changes are tested thoroughly, including security tests (e.g. access control). 
-1800 tests at time of leaving. 
-Tests were robust enough that we felt comfortable refactoring any part of the code base and not fear losing and breaking a feature or introducing a bug in the process.
-Implemented custom testing tools and frameworks to facilitate and thereby encourage testing
-- an assertion library for asserting on HTTP requests easily
-- a framework for declaratively defining access control tests based on user policy configuration.
-- tool for easily managing common artifacts in a test setup
-  e.g. each test needs a user
-  A tool for creating a new user, setting user policies, logging the user in, etc.
-  e.g. tests often need to interact with data in the knowledge graph
-  A tool for creating new data in the knowledge graph, modifying, deleting, querying, etc
-
-
-Site reliability:
-- logging: defined logging practice 
-  - definition of each log level
-  - what should be in a message
-  Implemented tool to support this practice.
-- logging implemented structured logging to facilitate parsing logs
-- logging: defined custom New Relic events for tracking uniform processes
-  e.g. event to track the start and end/error of a worker process
-- monitoring: setup monitors and alerts in New Relic
-
-
-
-data consistency and synchronization,
-data migration,
-parallelization,
-crash recovery,
-error handling and error code schemes,
-access control system (RBAC, ABAC).
-      }
-      \item {\tgproject{Exaptive Studio} A Low-Code platform, featuring not only client-side but also server-side components in \rfpython 2 and \rfrlang 
-        \tgsubitemlabel{Primary developer of components and layout engine}: 
-        \tgskills \rfjavascript, \rfpython 2/3, \rfrlang, \rfmysql, \rfredis, \rfdocker, networks (TCP/IP, websockets), \rfaws, \rfansible
-        - primary skills: Node.js, distributed systems, Python, R\\
-          secondary skills: AWS, Ansible \\
-        - DOM, layout
-        - interface
-        - domain 
-        - protocol
+      \item {
+        \tgproject{Exaptive Studio (2014-2019)} A low-code platform platform, featuring not only components client-side in \rfjavascript but also server-side in \rfpython 2 and \rfrlang.
+        I was the designer and developer for many of the core components, including 
+        the component interface and library package for users, 
+        layout engine with a virtual DOM,
+        component resource/dependency management and caching system,
+        and 
+        server-side component execution system including an RPC and a multipart protocol over TCP/IP.
+        \tgskills (Primary) \rfjavascript, \rfpython 2/3, \rfclang, \rfmysql, \rfredis, \rfdocker, TCP/IP, websockets, \rfhtml/\rfcss, \rfaws
       }
     \end{itemize}
   }
@@ -131,16 +53,16 @@ access control system (RBAC, ABAC).
       \liststyle
       \item {skills: \rfcsharp, \rftypescript, \rfhtml/\rfcss \rfbash \ scripting, \rfaws}
       \item{\tgproject{a WYSIWYG webpage editor} initially in \rfcsharp, then redesigned and reimplemented in \rftypescript. 
-      \\My main contribution was redesigning and implementing a more efficient layout engine, which converts the user design into corresponding \rfhtml/\rfcss.
-      \\Also assisted with frontend and DevOps as needed, such as writing \rfbash scripts to deploy updates to \rfaws.
-      \tgskills VMWare, Visual Studio, \rfcsharp, \rftypescript, \rfhtml/\rfcss, \rfbash, \rfaws
+      \tgsubitem My main contribution was redesigning and implementing a more efficient layout engine, which converts the user design into corresponding \rfhtml/\rfcss.
+      \tgsubitem Also assisted with frontend and DevOps as needed, such as writing \rfbash scripts to deploy updates to \rfaws.
+      \tgskills VMWare, Visual Studio, \rfcsharp, \rftypescript, \rfhtml/\rfcss, \rfmercurial, \rfbash, \rfaws
       }
 
       \item{\tgproject{Selective API, a reactive programming data structure with LINQ interface}
       this was before reactive programming became main stream, such as with \rfreact.
-      \\My main task was designing and implementing a complete set of automated tests for the implementing structure, and fixing any issues found in the process, including performance issues. 
-      \\Also documented full specifications of the data structure, establishing logically precise definitions and verifying functional correctness.
-      \tgskills VMWare, Visual Studio, \rfcsharp, \rflatex
+      \tgsubitem My main task was designing and implementing a complete set of automated tests for the implementing structure, and fixing any issues found in the process, including performance issues. 
+      \tgsubitem Also documented full specifications of the data structure, establishing logically precise definitions and verifying functional correctness.
+      \tgskills VMWare, Visual Studio, \rfcsharp, \rflatex, \rfmercurial
 
       }
     \end{itemize}
@@ -154,8 +76,17 @@ access control system (RBAC, ABAC).
   {
     \begin{itemize} % Description(s) of tasks/responsibilities
       \liststyle
-      \item {LAAMPS}
-      \item {One of my accomplishments was devising a way to dynamically select a key threshold as in place of the traditional manual approach, by applying statistical tools. }
+      \item {
+        Researched microscopic point-defects in iron due to irradiation in nuclear reactors using simulations.
+        Operated \href{https://www.lammps.org/}{LAMMPS}, a molecuar dynamics simulator, on a public remote computer cluster. 
+        Co-worked on a shell script suite to automate simulation run management, including scheduling and result retrieval.
+      }
+    \item{
+      \tgproject{Point defect analysis tool} designed and implemented a tool to analyze point defects in simulation runs by employing geometric and statistical tools. 
+      Performed point-defect identification and classification, and cluster identification.
+      Devised a new way to dynamically select a key threshold in place of the traditional manual value by statistical modelling.
+\tgskills \rffortran, \rfclang
+    }
     \end{itemize}
   }
 
