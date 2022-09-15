@@ -1,5 +1,4 @@
 SHELL=/bin/bash
-# TEX=pdflatex
 TEX=xelatex
 
 PDF=resume.pdf

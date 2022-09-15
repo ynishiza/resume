@@ -14,18 +14,21 @@
 \RequirePackage{pbox}
 \RequirePackage{geometry}
 \RequirePackage{fontawesome5}
-% colors
-%  xcolor: https://ftp.yz.yamagata-u.ac.jp/pub/CTAN/macros/latex/contrib/xcolor/xcolor.pdf
-\usepackage[colorlinks = true, linkcolor = darkgray, urlcolor = darkgray, citecolor = darkgray, anchorcolor = darkgray]{hyperref}
 
 \usepackage{enumitem}
 \usepackage{etaremune}
 \usepackage{amsmath}
 
+%% Formatting
+% colors
+%  xcolor: https://ftp.yz.yamagata-u.ac.jp/pub/CTAN/macros/latex/contrib/xcolor/xcolor.pdf
+\usepackage[colorlinks = true, linkcolor = gray, urlcolor = gray, citecolor = gray, anchorcolor = gray]{hyperref}
+
 % lengths and orientation
 \setlength{\parindent}{0ex} % Remove indent
 \setlength{\parskip}{0ex}
 \geometry{letterpaper, portrait, margin=0.5in}
+
 
 % format of section headings
 \titleformat{\section}
@@ -52,31 +55,6 @@
 }
 
 
-% Command to produce a talk:
-%	#1 talk title
-%	#2 seminar title
-%	#3 host location
-%	#4 date
-% \newcommand{\talk}[4]{
-% 	\textit{#1}. #2, #3, #4.
-% }
-
-% Command to produce a paper:
-%	#1 (optional) joint authors
-% 	#2 title
-%	#3 status - in preparation, submitted, accepted by..., to appear in..., etc.
-%	#4 Anything else, e.g. links
-% \newcommand{\paper}[4][\@nil]{%
-%   \def\tmp{#1}%
-  
-%    \ifx\tmp\@nnil
-%        \textbf{#2}. #3. #4
-%     \else
-%        \textbf{#2} (joint with #1). #3. #4
-%     \fi
-% }
-    
-    
 %%%%%%%%%%%%%%%%%%%% START MY COMMANDS %%%%%%%%%%%%%%%%%%%%
 % Formatting
 \setlength{\parindent}{0ex} % Paragraph indent
@@ -109,7 +87,7 @@
 % Reference items
 %
 % CLI
- \newcommand{\rf}{\href{https://nodejs.org/}{}}
+\newcommand{\rf}{\href{https://nodejs.org/}{}}
 \newcommand{\rfneovim}{\href{https://neovim.io/}{neovim}}
 \newcommand{\rfvim}{\href{https://www.vim.org/}{vim}}
 \newcommand{\rfgit}{\href{https://git-scm.com/}{git}}
@@ -136,6 +114,7 @@
 \newcommand{\rfnodejs}{\href{https://nodejs.org/}{Node.js}}
 \newcommand{\rfhtml}{\href{https://developer.mozilla.org/en-US/docs/Web/HTML}{HTML}}
 \newcommand{\rfcss}{\href{https://developer.mozilla.org/en-US/docs/Web/CSS}{CSS}}
+\newcommand{\rfdthree}{\href{https://d3js.org/}{D3}}
 % DB
 \newcommand{\rfredis}{\href{https://redis.io/}{Redis}}
 \newcommand{\rfneofj}{\href{https://neo4j.com/}{Neo4j}}
@@ -152,13 +131,14 @@
 \newcommand{\rfnewrelic}{\href{https://newrelic.com}{New Relic}}
 \newcommand{\rfsumologic}{\href{https://www.sumologic.com/}{Sumo Logic}}
 \newcommand{\rfjenkins}{\href{https://www.jenkins.io/}{Jenkins}}
+\newcommand{\rffirefox}{\href{https://www.mozilla.org/en-US/firefox/}{Firefox}}
 
 
 % Other
 %
 % tg=tag
 \newcommand{\tgproject}[1]{{\bf Project} #1:}
-\newcommand{\tgsubitem}{\\ > }
+\newcommand{\tgsubitem}{\\ $-$ }
 \newcommand{\tgsubitemlabel}[1]{\tgsubitem #1: }
 \newcommand{\tgskills}{\\{\bf skills} }
 \newcommand{\keyword}[1]{{\it #1}}

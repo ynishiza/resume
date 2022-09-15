@@ -8,37 +8,38 @@
   {
     \begin{itemize} % Description(s) of tasks/responsibilities
       \liststyle
-      \item {\tgproject{Cognitive city (2019-2022)} a generic graph-model knowledge base, advertised as a "social network of ideas".
-        I was the principal designer and developer for the application backend.
-        Aside from the core knowledge base, the backend included various other services, 
-        such as user management and login, API key, app customization, and analysis tools.
-        The backend was a distributed system written in \rfnodejs, through which I learned various principals such as 
+      \item {\tgproject{Cognitive city (2019-2022)} a generic graph-model knowledge base, branded as a "social network of ideas".
+        I was the principal designer and developer of the application backend.
+        In addition to the core knowledge base, the backend supported various other services, 
+        such as user management and authentication, API key, app customization, and data exploration and analysis tools.
+        A distributed system written in Node.js backed by MongoDB, Neo4j and Elasticsearch, through which I studied and employed various principles such as 
         authentication+authorization, 
-        data consistency, 
+        data syncing+consistency, 
+        data migration management,
         process parallelization+coordination, 
         fault tolerance, 
         access control, 
-        process logging and site reliability, 
+        process logging + monitoring, 
         etc.
-        \tgsubitem test suite: introduced rigorous test writing practice, thoroughly testing every change and feature, including security. 
-        Over 1800 tests at time of leaving.
-        It was robust enough that we can constantly refactor and refine the code with ease. 
+        \tgsubitem test suite: one of my favorite accomplishments. Introduced rigorous test writing practice, thoroughly testing every change and feature, including security. 
+        1800 tests at time of leaving. 
+        Its robustness allowed us to constantly refactor and refine the code comfortably, and thus retain high code quality. 
+        Also tried to share this success on the frontend which was seeking to be more robust, by designing and implementing a custom test framework in Cypress.
         \tgsubitem assisted with frontend and DevOps as necessary. 
-        Designed and implemented test framework for the fronted team in \rfcypress.
         \tgskills (Backend) \rfnodejs, \rfmongodb, \rfneofj, \rfredis, \rfelastic, \rfbash, \rfdocker, 
-        (DevOps) \rfaws, \rfansible, \rfterraform, \rfjenkins, \rfnewrelic, \rfsumologic,
-        (Frontend) \rfreact, \rfcypress
+        (DevOps) \rfjenkins, \rfaws, \rfansible, \rfterraform, \rfnewrelic, \rfsumologic,
+        (Frontend) \rftypescript, \rfreact, \rfcypress
       }
 
       \item {
-        \tgproject{Exaptive Studio (2014-2019)} A low-code platform platform, featuring not only components client-side in \rfjavascript but also server-side in \rfpython 2 and \rfrlang.
-        I was the designer and developer for many of the core components, including 
-        the component interface and library package for users, 
+        \tgproject{Exaptive Studio (2014-2019)} A low-code platform platform, featuring not only components client-side in JavaScript but also server-side in Python 2 and \rfrlang.
+        I was the designer and developer for many of the core parts, including 
+        the user-facing component interface and library package for all languages, 
         layout engine with a virtual DOM,
-        component resource/dependency management and caching system,
+        component resource/dependency management and caching system, including JS dependency conflict handling (e.g use both D3 v6 and v7),
         and 
         server-side component execution system including an RPC and a multipart protocol over TCP/IP.
-        \tgskills (Primary) \rfjavascript, \rfpython 2/3, \rfclang, \rfmysql, \rfredis, \rfdocker, TCP/IP, websockets, \rfhtml/\rfcss, \rfaws
+        \tgskills  \rfjavascript, \rfpython\ 2/3, \rfclang, \rfphp, \rfmysql, \rfredis, \rfdocker, TCP/IP, websockets, \rfhtml/\rfcss, \rfaws, \rfdthree
       }
     \end{itemize}
   }
@@ -51,17 +52,16 @@
   {
     \begin{itemize} % Description(s) of tasks/responsibilities
       \liststyle
-      \item {skills: \rfcsharp, \rftypescript, \rfhtml/\rfcss \rfbash \ scripting, \rfaws}
-      \item{\tgproject{a WYSIWYG webpage editor} initially in \rfcsharp, then redesigned and reimplemented in \rftypescript. 
-      \tgsubitem My main contribution was redesigning and implementing a more efficient layout engine, which converts the user design into corresponding \rfhtml/\rfcss.
-      \tgsubitem Also assisted with frontend and DevOps as needed, such as writing \rfbash scripts to deploy updates to \rfaws.
+      \item{\tgproject{a WYSIWYG webpage editor} initially in C\#, then redesigned and implemented in TypeScript. 
+      My main contribution was redesigning and implementing a more efficient layout engine, which converts the user design into corresponding HTML/CSS.
+      Also assisted with frontend and DevOps as needed, such as writing shell scripts to deploy updates to AWS.
       \tgskills VMWare, Visual Studio, \rfcsharp, \rftypescript, \rfhtml/\rfcss, \rfmercurial, \rfbash, \rfaws
       }
 
       \item{\tgproject{Selective API, a reactive programming data structure with LINQ interface}
-      this was before reactive programming became main stream, such as with \rfreact.
-      \tgsubitem My main task was designing and implementing a complete set of automated tests for the implementing structure, and fixing any issues found in the process, including performance issues. 
-      \tgsubitem Also documented full specifications of the data structure, establishing logically precise definitions and verifying functional correctness.
+      this was before reactive programming became main stream, such as with React.
+      My main task was designing and implementing a complete set of automated tests for the data structure, and fixing any issues found in the process, including performance issues. \\
+      Also documented full specifications of the data structure, establishing logically precise definitions and verifying functional correctness.
       \tgskills VMWare, Visual Studio, \rfcsharp, \rflatex, \rfmercurial
 
       }
@@ -69,20 +69,20 @@
   }
 
 \cventry
-  {Computational Research Assistant (Internship)} % Job title
+  {Computational Research Assistant (Co-op)} % Job title
   {CANMET Materials Technology Laboratory (NRCan)} % Organization
   {Ottawa, ON, Canada} % Location
   {2008 - 2009} % chktex 8
   {
     \begin{itemize} % Description(s) of tasks/responsibilities
       \liststyle
-      \item {
-        Researched microscopic point-defects in iron due to irradiation in nuclear reactors using simulations.
-        Operated \href{https://www.lammps.org/}{LAMMPS}, a molecuar dynamics simulator, on a public remote computer cluster. 
+      \item{
+        Researched microscopic point-defects in iron due to irradiation in nuclear reactors using simulations.}
+      \item{Operated \href{https://www.lammps.org/}{LAMMPS}, a molecular dynamics simulator, on a public remote computer cluster. 
         Co-worked on a shell script suite to automate simulation run management, including scheduling and result retrieval.
       }
     \item{
-      \tgproject{Point defect analysis tool} designed and implemented a tool to analyze point defects in simulation runs by employing geometric and statistical tools. 
+      \tgproject{Point defect analysis tool} designed and implemented a Fortran 95 tool to analyze point defects in simulation runs by employing geometric and statistical tools. 
       Performed point-defect identification and classification, and cluster identification.
       Devised a new way to dynamically select a key threshold in place of the traditional manual value by statistical modelling.
 \tgskills \rffortran, \rfclang
@@ -93,7 +93,7 @@
 
 
 \cventry
-  {Research Assistant (Internship)} % Job title
+  {Research Assistant (Co-op)} % Job title
   {Center of Atmospheric Sciences (University of Waterloo)} % Organization
   {Waterloo, ON, Canada} % Date(s)
   {Jan 2008 - Apr 2008} % Location
@@ -101,15 +101,15 @@
     \begin{itemize} % Description(s) of tasks/responsibilities
       \liststyle
       \item {helped reproduce snowflake-like ice particles with clear crystalline shapes for the first time in the lab's flowtube. The key was adding more moisture.}
-      \item {\tgproject{3D shape identification} designed and implemented a program to identify the 3D shape of ice particles from images taken in the flowtube. 
-      The program applied the theory of discrete Fourier shape descriptors. \\
+      \item {\tgproject{3D shape identification} designed and implemented a C/C++ program to identify the 3D shape of ice particles from images taken in the flowtube. 
+      The program applied the theory of discrete Fourier shape descriptors.
       I reduced a core integral equation used at the lab into a simpler form.
       \tgskills: \rfcpp, \rfmysql}
     \end{itemize}
   }
 
 \cventry
-  {Quality Analyst (Internship)} % Job title
+  {Quality Analyst (Co-op)} % Job title
   {Quest Software} % Organization
   {Toronto, ON, Canada} % Location
   {May 2007 - Aug 2007} % Date(s)
@@ -124,7 +124,7 @@ Automated setups and tests using shell scripts.
 }
 
 \cventry
-  {IT Assistant (Internship)} % Job title
+  {IT Assistant (Co-op)} % Job title
   {Canadian Academy} % Organization
   {Kobe, Hyogo, Japan} % Date(s)
   {Sep 2006 - Dec 2006} % Location
