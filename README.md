@@ -1,3 +1,5 @@
+Latest [PDF](./pdf/)
+
 # Setup
 
 Compiled in LaTeX.
